@@ -1313,7 +1313,7 @@ Children:
       - Name: Panel
         Type: NodePointer
         DataType: NodeId
-        Value: "/Objects/corso_202509/UI/Screens/Home"
+        Value: "/Objects/corso_202509/UI/Screens/MyConverters"
         Children:
         - Name: Kind
           Type: PropertyType

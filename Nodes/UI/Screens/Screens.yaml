@@ -1158,506 +1158,632 @@ Children:
   Supertype: Screen
   ReferenceType: HasComponent
   Children:
-  - Name: SpinBox1
-    Type: SpinBox
+  - Name: ScrollView1
+    Type: ScrollView
     Children:
-    - Name: Value
+    - Name: ContentWidth
       Type: BaseDataVariableType
-      DataType: Double
+      DataType: Size
+      AccessLevel: Read
+    - Name: ContentHeight
+      Type: BaseDataVariableType
+      DataType: Size
+      AccessLevel: Read
+    - Name: ViewWidth
+      Type: BaseDataVariableType
+      DataType: Size
+      AccessLevel: Read
+    - Name: ViewHeight
+      Type: BaseDataVariableType
+      DataType: Size
+      AccessLevel: Read
+    - Name: ContentX
+      Type: BaseDataVariableType
+      DataType: Size
+    - Name: ContentY
+      Type: BaseDataVariableType
+      DataType: Size
+    - Class: Reference
+      Target: ns=3;i=1394
+      Direction: Forward
     - Name: Width
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 100.0
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 20.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 80.0
-  - Name: LED1
-    Type: Led
-    Children:
-    - Name: Active
-      Type: BaseDataVariableType
-      DataType: Boolean
-      Value: true
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 50.0
+      Value: 300.0
     - Name: Height
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 50.0
-    - Name: LeftMargin
+      Value: 300.0
+    - Name: HorizontalAlignment
       Type: BaseVariableType
-      DataType: Size
+      DataType: HorizontalAlignment
       ModellingRule: Optional
-      Value: 160.0
-    - Name: TopMargin
+      Value: 3
+    - Name: VerticalAlignment
       Type: BaseVariableType
-      DataType: Size
+      DataType: VerticalAlignment
       ModellingRule: Optional
-      Value: 70.0
-    - Name: Text
-      Type: BaseDataVariableType
-      DataType: LocalizedText
-      ModellingRule: Optional
-      Value: {"LocaleId":"en-US","Text":""}
-    - Name: Color
-      Type: BaseDataVariableType
-      DataType: Color
-      Value: "#ff0000"
+      Value: 3
+    - Name: Panel1
+      Type: Panel
       Children:
-      - Name: KeyValueConverter1
-        Type: ValueMapConverter
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 300.0
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: Label11
+        Type: Label
         Children:
-        - Name: Source
-          Type: BaseDataVariableType
-          DataType: BaseDataType
-          ReferenceType: HasSource
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../../../../SpinBox1/Value"
-        - Name: ns=2;Pairs
-          Type: BaseObjectType
-          ModellingRule: None
-          Children:
-          - Name: Pair
-            Type: ValueMapPair
-            ModellingRule: None
-            Children:
-            - Name: Key
-              Type: BaseDataVariableType
-              DataType: Double
-              ModellingRule: None
-            - Name: Value
-              Type: BaseDataVariableType
-              DataType: Color
-              ModellingRule: None
-              Value: "#000000"
-          - Name: Pair1
-            Type: ValueMapPair
-            ModellingRule: None
-            Children:
-            - Name: Key
-              Type: BaseDataVariableType
-              DataType: Double
-              ModellingRule: None
-              Value: 2.0
-            - Name: Value
-              Type: BaseDataVariableType
-              DataType: Color
-              ModellingRule: None
-              Value: "#ffff00"
-          - Name: Pair2
-            Type: ValueMapPair
-            ModellingRule: None
-            Children:
-            - Name: Key
-              Type: BaseDataVariableType
-              DataType: Double
-              ModellingRule: None
-              Value: 3.0
-            - Name: Value
-              Type: BaseDataVariableType
-              DataType: Color
-              ModellingRule: None
-              Value: "#ffa500"
-          - Name: Pair3
-            Type: ValueMapPair
-            ModellingRule: None
-            Children:
-            - Name: Key
-              Type: BaseDataVariableType
-              DataType: Double
-              ModellingRule: None
-              Value: 4.0
-            - Name: Value
-              Type: BaseDataVariableType
-              DataType: Color
-              ModellingRule: None
-              Value: "#ff0000"
-          - Name: Pair4
-            Type: ValueMapPair
-            ModellingRule: None
-            Children:
-            - Name: Key
-              Type: BaseDataVariableType
-              DataType: Double
-              ModellingRule: None
-              Value: 1.0
-            - Name: Value
-              Type: BaseDataVariableType
-              DataType: Color
-              ModellingRule: None
-              Value: "#00ff00"
-  - Name: Label1
-    Type: Label
-    Children:
-    - Name: Text
-      Type: BaseDataVariableType
-      DataType: LocalizedText
-      ModellingRule: Optional
-      Value: {"LocaleId":"en-US","Text":"KV converter"}
-    - Name: Style
-      Type: BaseDataVariableType
-      DataType: String
-      ModellingRule: Optional
-      Value: "Title"
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 14.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 10.0
-  - Name: PolyLine1
-    Type: PolyLine
-    Children:
-    - Name: LineThickness
-      Type: BaseDataVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 1.0
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 540.0
-    - Name: Height
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 20.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 140.0
-    - Name: Path
-      Type: BaseDataVariableType
-      DataType: String
-      ModellingRule: Optional
-      Value: "M 0.000000 0.000000 L 540.000000 0.000000"
-  - Name: Label2
-    Type: Label
-    Children:
-    - Name: Text
-      Type: BaseDataVariableType
-      DataType: LocalizedText
-      ModellingRule: Optional
-      Value: {"LocaleId":"en-US","Text":"String formatter"}
-    - Name: Style
-      Type: BaseDataVariableType
-      DataType: String
-      ModellingRule: Optional
-      Value: "Title"
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 16.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 150.0
-  - Name: TextBox1
-    Type: TextBox
-    Children:
-    - Name: Text
-      Type: BaseDataVariableType
-      DataType: LocalizedText
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 230.0
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 20.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 205.0
-    - Name: ValueChangeBehaviour
-      Type: BaseDataVariableType
-      DataType: ValueChangeBehaviour
-      ModellingRule: Optional
-      Value: 1
-    - Name: PlaceholderText
-      Type: BaseDataVariableType
-      DataType: LocalizedText
-      ModellingRule: Optional
-      Value: {"LocaleId":"en-US","Text":"insert your name"}
-  - Name: Label3
-    Type: Label
-    Children:
-    - Name: Text
-      Type: BaseDataVariableType
-      DataType: LocalizedText
-      Children:
-      - Name: StringFormatter1
-        Type: StringFormatter
-        Children:
-        - Name: Format
+        - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          ReferenceType: HasParameter
           ModellingRule: Optional
-          Value: {"LocaleId":"en-US","Text":"Ciao, {#UserName}"}
-        - Name: ns=2;SourceUserName
-          Type: BaseDataVariableType
-          DataType: BaseDataType
-          ReferenceType: HasSource
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../../../../TextBox1/Text"
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 270.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 210.0
-  - Name: SpinBox2
-    Type: SpinBox
-    Children:
-    - Name: Value
-      Type: BaseDataVariableType
-      DataType: Double
-      Children:
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "/Objects/corso_202509/Model/Variable2"
-        Children:
-        - Name: Mode
+          Value: {"LocaleId":"en-US","Text":"Field"}
+        - Name: LeftMargin
           Type: BaseVariableType
-          DataType: DynamicLinkMode
+          DataType: Size
           ModellingRule: Optional
-          Value: 2
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 180.0
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 20.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 245.0
-  - Name: Label4
-    Type: Label
-    Children:
-    - Name: Text
-      Type: BaseDataVariableType
-      DataType: LocalizedText
-      Children:
-      - Name: StringFormatter1
-        Type: StringFormatter
+          Value: 94.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 630.0
+      - Name: Label10
+        Type: Label
         Children:
-        - Name: Format
+        - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          ReferenceType: HasParameter
           ModellingRule: Optional
-          Value: {"LocaleId":"en-US","Text":"{0:f2}"}
-        - Name: ns=2;Source0
+          Value: {"LocaleId":"en-US","Text":"UI"}
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 238.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 630.0
+      - Name: SpinBox6
+        Type: SpinBox
+        Children:
+        - Name: Value
           Type: BaseDataVariableType
-          DataType: BaseDataType
-          ReferenceType: HasSource
+          DataType: Double
           Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
             Value: "/Objects/corso_202509/Model/Variable2"
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 245.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 250.0
-  - Name: PolyLine2
-    Type: PolyLine
-    Children:
-    - Name: LineThickness
-      Type: BaseDataVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 1.0
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 540.0
-    - Name: Height
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 20.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 290.0
-    - Name: Path
-      Type: BaseDataVariableType
-      DataType: String
-      ModellingRule: Optional
-      Value: "M 0.000000 0.000000 L 540.000000 0.000000"
-  - Name: Label5
-    Type: Label
-    Children:
-    - Name: Text
-      Type: BaseDataVariableType
-      DataType: LocalizedText
-      ModellingRule: Optional
-      Value: {"LocaleId":"en-US","Text":"Expression evaluator & Conditional converter"}
-    - Name: Style
-      Type: BaseDataVariableType
-      DataType: String
-      ModellingRule: Optional
-      Value: "Title"
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 20.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 304.0
-  - Name: varA
-    Type: SpinBox
-    Children:
-    - Name: Value
-      Type: BaseDataVariableType
-      DataType: Double
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 80.0
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 40.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 361.0
-  - Name: varB
-    Type: SpinBox
-    Children:
-    - Name: Value
-      Type: BaseDataVariableType
-      DataType: Double
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 80.0
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 130.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 361.0
-  - Name: Res
-    Type: Led
-    Children:
-    - Name: Active
-      Type: BaseDataVariableType
-      DataType: Boolean
-      Value: true
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 50.0
-    - Name: Height
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 50.0
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 220.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 350.0
-    - Name: Color
-      Type: BaseDataVariableType
-      DataType: Color
-      Value: "#ff0000"
-      Children:
-      - Name: ConditionalConverter1
-        Type: ConditionalConverter
-        Children:
-        - Name: Condition
-          Type: BaseDataVariableType
-          DataType: Boolean
-          ReferenceType: HasSource
-          Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
             Children:
-            - Name: Expression
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              ModellingRule: Optional
+              Value: 2
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 140.0
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 30.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 655.0
+      - Name: SpinBox5
+        Type: SpinBox
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Double
+          Children:
+          - Name: EngineeringUnitConverter1
+            Type: EUConverter
+            Children:
+            - Name: Source
               Type: BaseDataVariableType
-              DataType: String
+              DataType: Number
+              ReferenceType: HasSource
+              Value: {"Type":11,"Body":0.0}
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "/Objects/corso_202509/Model/Variable2"
+                Children:
+                - Name: Mode
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+            - Name: RawMin
+              Type: BaseDataVariableType
+              DataType: Double
               ReferenceType: HasParameter
               ModellingRule: Optional
-              Value: "{0} == {1}"
+            - Name: RawMax
+              Type: BaseDataVariableType
+              DataType: Double
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: 582.0
+            - Name: ScaledMin
+              Type: BaseDataVariableType
+              DataType: Double
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+            - Name: ScaledMax
+              Type: BaseDataVariableType
+              DataType: Double
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: 100.0
+            - Name: Mode
+              Type: PropertyType
+              DataType: DynamicLinkMode
+              ReferenceType: HasComponent
+              ModellingRule: Optional
+              Value: 2
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 120.0
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 190.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 655.0
+      - Name: PolyLine4
+        Type: PolyLine
+        Children:
+        - Name: LineThickness
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 1.0
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 540.0
+        - Name: Height
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 20.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 570.0
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: String
+          ModellingRule: Optional
+          Value: "M 0.000000 0.000000 L 540.000000 0.000000"
+      - Name: Label9
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"LocaleId":"en-US","Text":"Engineering unit converter"}
+        - Name: Style
+          Type: BaseDataVariableType
+          DataType: String
+          ModellingRule: Optional
+          Value: "Title"
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 27.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 584.0
+      - Name: Label8
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"LocaleId":"en-US","Text":"Field"}
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 290.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 490.0
+      - Name: Label7
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"LocaleId":"en-US","Text":"UI"}
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 108.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 490.0
+      - Name: SpinBox4
+        Type: SpinBox
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Double
+          Children:
+          - Name: LinearConverter1
+            Type: LinearConverter
+            Children:
+            - Name: Source
+              Type: BaseDataVariableType
+              DataType: Number
+              ReferenceType: HasSource
+              Value: {"Type":11,"Body":0.0}
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "/Objects/corso_202509/Model/Variable2"
+                Children:
+                - Name: Mode
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+            - Name: Slope
+              Type: BaseDataVariableType
+              DataType: Double
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: 0.1
+            - Name: Intercept
+              Type: BaseDataVariableType
+              DataType: Double
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+            - Name: Mode
+              Type: PropertyType
+              DataType: DynamicLinkMode
+              ReferenceType: HasComponent
+              ModellingRule: Optional
+              Value: 2
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 190.0
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 30.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 515.0
+      - Name: SpinBox3
+        Type: SpinBox
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Double
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/corso_202509/Model/Variable2"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              ModellingRule: Optional
+              Value: 2
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 180.0
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 240.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 515.0
+      - Name: Label6
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"LocaleId":"en-US","Text":"Linear converter"}
+        - Name: Style
+          Type: BaseDataVariableType
+          DataType: String
+          ModellingRule: Optional
+          Value: "Title"
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 20.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 430.0
+      - Name: PolyLine3
+        Type: PolyLine
+        Children:
+        - Name: LineThickness
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 1.0
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 540.0
+        - Name: Height
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 20.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 420.0
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: String
+          ModellingRule: Optional
+          Value: "M 0.000000 0.000000 L 540.000000 0.000000"
+      - Name: Res
+        Type: Led
+        Children:
+        - Name: Active
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 50.0
+        - Name: Height
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 50.0
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 220.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 350.0
+        - Name: Color
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#ff0000"
+          Children:
+          - Name: ConditionalConverter1
+            Type: ConditionalConverter
+            Children:
+            - Name: Condition
+              Type: BaseDataVariableType
+              DataType: Boolean
+              ReferenceType: HasSource
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Expression
+                  Type: BaseDataVariableType
+                  DataType: String
+                  ReferenceType: HasParameter
+                  ModellingRule: Optional
+                  Value: "{0} == {1}"
+                - Name: ns=2;Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../../../varA/Value"
+                - Name: ns=2;Source1
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../../../varB/Value"
+            - Name: TrueValue
+              Type: BaseDataVariableType
+              DataType: Color
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: "#00ff00"
+            - Name: FalseValue
+              Type: BaseDataVariableType
+              DataType: Color
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: "#ff0000"
+      - Name: varB
+        Type: SpinBox
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Double
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 80.0
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 130.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 361.0
+      - Name: varA
+        Type: SpinBox
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Double
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 80.0
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 40.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 361.0
+      - Name: Label5
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"LocaleId":"en-US","Text":"Expression evaluator & Conditional converter"}
+        - Name: Style
+          Type: BaseDataVariableType
+          DataType: String
+          ModellingRule: Optional
+          Value: "Title"
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 20.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 304.0
+      - Name: PolyLine2
+        Type: PolyLine
+        Children:
+        - Name: LineThickness
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 1.0
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 540.0
+        - Name: Height
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 20.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 290.0
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: String
+          ModellingRule: Optional
+          Value: "M 0.000000 0.000000 L 540.000000 0.000000"
+      - Name: Label4
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Children:
+          - Name: StringFormatter1
+            Type: StringFormatter
+            Children:
+            - Name: Format
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: {"LocaleId":"en-US","Text":"{0:f2}"}
             - Name: ns=2;Source0
               Type: BaseDataVariableType
               DataType: BaseDataType
@@ -1666,8 +1792,66 @@ Children:
               - Name: DynamicLink
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "../../../../../../varA/Value"
-            - Name: ns=2;Source1
+                Value: "/Objects/corso_202509/Model/Variable2"
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 245.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 250.0
+      - Name: SpinBox2
+        Type: SpinBox
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Double
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/corso_202509/Model/Variable2"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              ModellingRule: Optional
+              Value: 2
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 180.0
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 20.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 245.0
+      - Name: Label3
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Children:
+          - Name: StringFormatter1
+            Type: StringFormatter
+            Children:
+            - Name: Format
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: {"LocaleId":"en-US","Text":"Ciao, {#UserName}"}
+            - Name: ns=2;SourceUserName
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
@@ -1675,51 +1859,269 @@ Children:
               - Name: DynamicLink
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "../../../../../../varB/Value"
-        - Name: TrueValue
+                Value: "../../../../TextBox1/Text"
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 270.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 210.0
+      - Name: TextBox1
+        Type: TextBox
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 230.0
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 20.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 205.0
+        - Name: ValueChangeBehaviour
+          Type: BaseDataVariableType
+          DataType: ValueChangeBehaviour
+          ModellingRule: Optional
+          Value: 1
+        - Name: PlaceholderText
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"LocaleId":"en-US","Text":"insert your name"}
+      - Name: Label2
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"LocaleId":"en-US","Text":"String formatter"}
+        - Name: Style
+          Type: BaseDataVariableType
+          DataType: String
+          ModellingRule: Optional
+          Value: "Title"
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 16.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 150.0
+      - Name: PolyLine1
+        Type: PolyLine
+        Children:
+        - Name: LineThickness
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 1.0
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 540.0
+        - Name: Height
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 20.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 140.0
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: String
+          ModellingRule: Optional
+          Value: "M 0.000000 0.000000 L 540.000000 0.000000"
+      - Name: Label1
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"LocaleId":"en-US","Text":"KV converter"}
+        - Name: Style
+          Type: BaseDataVariableType
+          DataType: String
+          ModellingRule: Optional
+          Value: "Title"
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 14.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 10.0
+      - Name: LED1
+        Type: Led
+        Children:
+        - Name: Active
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 50.0
+        - Name: Height
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 50.0
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 160.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 70.0
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"LocaleId":"en-US","Text":""}
+        - Name: Color
           Type: BaseDataVariableType
           DataType: Color
-          ReferenceType: HasParameter
-          ModellingRule: Optional
-          Value: "#00ff00"
-        - Name: FalseValue
-          Type: BaseDataVariableType
-          DataType: Color
-          ReferenceType: HasParameter
-          ModellingRule: Optional
           Value: "#ff0000"
-  - Name: PolyLine3
-    Type: PolyLine
-    Children:
-    - Name: LineThickness
-      Type: BaseDataVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 1.0
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 540.0
-    - Name: Height
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 20.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 420.0
-    - Name: Path
-      Type: BaseDataVariableType
-      DataType: String
-      ModellingRule: Optional
-      Value: "M 0.000000 0.000000 L 540.000000 0.000000"
+          Children:
+          - Name: KeyValueConverter1
+            Type: ValueMapConverter
+            Children:
+            - Name: Source
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../SpinBox1/Value"
+            - Name: ns=2;Pairs
+              Type: BaseObjectType
+              ModellingRule: None
+              Children:
+              - Name: Pair
+                Type: ValueMapPair
+                ModellingRule: None
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Double
+                  ModellingRule: None
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Color
+                  ModellingRule: None
+                  Value: "#000000"
+              - Name: Pair1
+                Type: ValueMapPair
+                ModellingRule: None
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Double
+                  ModellingRule: None
+                  Value: 2.0
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Color
+                  ModellingRule: None
+                  Value: "#ffff00"
+              - Name: Pair2
+                Type: ValueMapPair
+                ModellingRule: None
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Double
+                  ModellingRule: None
+                  Value: 3.0
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Color
+                  ModellingRule: None
+                  Value: "#ffa500"
+              - Name: Pair3
+                Type: ValueMapPair
+                ModellingRule: None
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Double
+                  ModellingRule: None
+                  Value: 4.0
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Color
+                  ModellingRule: None
+                  Value: "#ff0000"
+              - Name: Pair4
+                Type: ValueMapPair
+                ModellingRule: None
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Double
+                  ModellingRule: None
+                  Value: 1.0
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Color
+                  ModellingRule: None
+                  Value: "#00ff00"
+      - Name: SpinBox1
+        Type: SpinBox
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Double
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 100.0
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 20.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 80.0
 - Name: Screen6
   Id: g=798805a317e64e67325bf1cdd5d7caed
   Supertype: Screen
