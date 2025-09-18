@@ -1,7 +1,22 @@
 Name: Model
 Type: ModelCategoryFolder
 Children:
+- Name: Variable2
+  Type: BaseDataVariableType
+  DataType: Float
+  Value: 1.2345670461654663
 - Name: Variable1
   Id: g=01735123b9b606663c0f63fe8f357c75
   Type: BaseDataVariableType
   DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../CommDrivers/CODESYSDriver1/CODESYSStation1/Tags/Application/GVL/Motori/1/Acceso"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- File: MyTags/MyTags.yaml
