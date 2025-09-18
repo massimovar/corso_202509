@@ -20,3 +20,201 @@ Children:
       DataType: DynamicLinkMode
       Value: 2
 - File: MyTags/MyTags.yaml
+- Name: ArrayBool
+  Type: BaseDataVariableType
+  DataType: Boolean
+  ValueRank: OneDimension
+  ArrayDimensions: [10]
+- Name: MiaValvola
+  Id: g=709833397bcef9bf641844e322635e63
+  Supertype: BaseObjectType
+  Children:
+  - Name: Nome
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: Pressione
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Enabled
+    Type: BaseDataVariableType
+    DataType: Boolean
+- File: Valvole_Istanze/Valvole_Istanze.yaml
+- Class: DataType
+  Name: MyEnum
+  Id: g=8747a3af80d467045c77e0f4df022f7e
+  Supertype: Enumeration
+  EnumDefinition: 
+   {
+    "Name": "MyEnum",
+    "DataType": {
+     "IdType": 2,
+     "Id": "8747a3af80d467045c77e0f4df022f7e",
+     "Namespace": 7
+    },
+    "Fields": [{
+      "Name": "Value0",
+      "Value": 0,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Valore 0"
+      },
+      "Description": {
+       "LocaleId": "en-US",
+       "Text": "Zero"
+      }
+     },{
+      "Name": "Value1",
+      "Value": 1,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Valore 1"
+      },
+      "Description": {
+       "LocaleId": "en-US",
+       "Text": "Uno"
+      }
+     },{
+      "Name": "Value2",
+      "Value": 2,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Valore 2"
+      },
+      "Description": {
+       "LocaleId": "en-US",
+       "Text": "Due"
+      }
+     },{
+      "Name": "Value3",
+      "Value": 3,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Valore 3"
+      },
+      "Description": {
+       "LocaleId": "en-US",
+       "Text": "Tre"
+      }
+     }]
+   }
+  Children:
+  - Name: ns=0;EnumValues
+    Type: BaseDataVariableType
+    DataType: EnumValueType
+    ModellingRule: None
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+    Value: [{"TypeId":{"Id":7594},"Body":{"Value":0,"DisplayName":{"LocaleId":"en-US","Text":"Valore 0"},"Description":{"LocaleId":"en-US","Text":"Zero"}}},{"TypeId":{"Id":7594},"Body":{"Value":1,"DisplayName":{"LocaleId":"en-US","Text":"Valore 1"},"Description":{"LocaleId":"en-US","Text":"Uno"}}},{"TypeId":{"Id":7594},"Body":{"Value":2,"DisplayName":{"LocaleId":"en-US","Text":"Valore 2"},"Description":{"LocaleId":"en-US","Text":"Due"}}},{"TypeId":{"Id":7594},"Body":{"Value":3,"DisplayName":{"LocaleId":"en-US","Text":"Valore 3"},"Description":{"LocaleId":"en-US","Text":"Tre"}}}]
+- Name: ElementoSelezionatoCombo
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: VarEvento
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: VarEventoTransitioned
+  Type: VariableTransitionEventDispatcher
+  Children:
+  - Name: Value
+    Type: BaseVariableType
+    DataType: Double
+    Value: 2.0
+  - Name: Transition
+    Type: BaseVariableType
+    DataType: VariableTransition
+  - Name: VariableNodePath
+    Type: BaseVariableType
+    DataType: NodePath
+    Value: "../VarEvento"
+  - Name: VariableTransitionEventHandler1
+    Type: EventHandler
+    Children:
+    - Name: ListenEventType
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/EventTypes/BaseEventType/VariableConditionEvent/VariableTransitionEvent"
+    - Name: MethodsToCall
+      Type: BaseObjectType
+      Children:
+      - Name: MethodContainer1
+        Type: BaseObjectType
+        Children:
+        - Name: ns=2;ObjectPointer
+          Type: NodePointer
+          DataType: NodeId
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../../Commands/VariableCommands@NodeId"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+        - Name: ns=2;Method
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Increment"
+        - Name: InputArguments
+          Type: BaseObjectType
+          Children:
+          - Name: VariableToModify
+            Type: BaseDataVariableType
+            DataType: VariablePointer
+            Description: {"NamespaceIndex":2,"TextId":"IncrementVariableToModifyDescription"}
+            Value: "/Objects/corso_202509/Model/VarEventoIncremento"
+          - Name: Delta
+            Type: BaseDataVariableType
+            DataType: Float
+            Description: {"NamespaceIndex":2,"TextId":"IncrementDeltaDescription"}
+            Value: 10.0
+          - Name: ArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Description: {"NamespaceIndex":2,"TextId":"IncrementArrayIndexDescription"}
+            ValueRank: ScalarOrOneDimension
+    - Name: EventArguments
+      Type: VariableTransitionEvent
+      Children:
+      - Name: VariableNodeId
+        Type: BaseVariableType
+        DataType: NodeId
+      - Name: NewValue
+        Type: BaseVariableType
+        DataType: BaseDataType
+      - Name: OldValue
+        Type: BaseVariableType
+        DataType: BaseDataType
+      - Name: EventId
+        Type: PropertyType
+        DataType: ByteString
+      - Name: EventType
+        Type: PropertyType
+        DataType: NodeId
+      - Name: SourceNode
+        Type: PropertyType
+        DataType: NodeId
+      - Name: SourceName
+        Type: PropertyType
+        DataType: String
+      - Name: Time
+        Type: PropertyType
+        DataType: UtcTime
+      - Name: ReceiveTime
+        Type: PropertyType
+        DataType: UtcTime
+      - Name: Message
+        Type: PropertyType
+        DataType: LocalizedText
+      - Name: Severity
+        Type: PropertyType
+        DataType: UInt16
+- Name: VarEventoIncremento
+  Id: g=e6b22df8afd7a81edd9994e3b4503656
+  Type: BaseDataVariableType
+  DataType: Int32

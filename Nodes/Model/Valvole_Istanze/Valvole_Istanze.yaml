@@ -1,0 +1,48 @@
+Name: Valvole_Istanze
+Id: g=9b9c1cc5a24de3516bb74009cf353c54
+Type: FolderType
+Children:
+- Name: MiaValvola1
+  Id: g=bafea59f417dcf712e32ae9e2a16671f
+  Type: MiaValvola
+  Children:
+  - Name: Nome
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Valvola1"
+  - Name: Pressione
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 100
+  - Name: Enabled
+    Type: BaseDataVariableType
+    DataType: Boolean
+- Name: MiaValvola2
+  Id: g=85f81518c2b547f3a5cc751b70181601
+  Type: MiaValvola
+  Children:
+  - Name: Nome
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Valvola2"
+  - Name: Pressione
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 200
+  - Name: Enabled
+    Type: BaseDataVariableType
+    DataType: Boolean
+- Name: MiaValvola3
+  Type: MiaValvola
+  Children:
+  - Name: Nome
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Valvola3"
+  - Name: Pressione
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 300
+  - Name: Enabled
+    Type: BaseDataVariableType
+    DataType: Boolean
