@@ -488,6 +488,28 @@ Children:
           DataType: Int32
           ModellingRule: Optional
           Value: 1
+      - Name: Image1
+        Type: Image
+        Children:
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=7;%PROJECTDIR%/imgs/FTOptixLogo_cyan.svg"
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 240.0
+        - Name: Height
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 78.0
+        - Name: VerticalAlignment
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 2
     - Name: menu
       Type: Rectangle
       Children:
